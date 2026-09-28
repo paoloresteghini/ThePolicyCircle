@@ -1,5 +1,17 @@
 # The Policy Circle project
 
+## Mandatory task completion check
+
+Maintain `TASKS.md` automatically as part of doing the work. Do not wait for the user to ask.
+
+1. At the start of work, identify the relevant task ID and read its completion criteria. Add a task if the authorized work has no matching row.
+2. Update the status as work progresses: In progress, Waiting, or Blocked, with the remaining dependency or obstacle.
+3. Before reporting completion, verify the task's completion criteria, then update its row to Complete with the date and concise evidence (test result, artifact, verified access, or commit). Update related checklist items and the progress summary in the same edit.
+4. Re-read the updated row before the final response. A task is not ready to report as complete until this tracker update is saved and checked. If the tracker cannot be updated, explicitly report that limitation.
+5. Partial work remains In progress, Waiting, or Blocked. Split independently completed subtasks where useful; never close an entire task because only one part passed. Reopen a task if later evidence invalidates completion.
+
+This check applies even when changes are made through SSH, WP-CLI, MCP or the browser and no code commit occurs. Keep `TASKS.md` local and ignored by Git. On a fresh clone where it is missing, create a tracker for the current authorized work and note that historical completion evidence is unavailable. Never reconstruct completion claims from guesses. This is an agent workflow requirement, not a background automation or Git hook.
+
 ## HARD GUARDRAIL: NEVER TOUCH PRODUCTION
 
 User instruction, 2026-09-28. Agent work is STAGING ONLY. This overrides operational permission implied by the contract, old task lists, client sign-off, emails, or generic requests to deploy, publish, fix, sync, restore, or launch.
