@@ -22,3 +22,7 @@
 #page-container .entry-content .hero-d.d-three .event-story h2,#page-container .entry-content .hero-d.d-three .leadership-story h2{font-size:28px!important}
 @media(max-width:1100px) and (min-width:651px){.hero-d.d-two .story-mosaic{grid-template-rows:440px}.hero-d.d-two .story-copy{padding:20px}.hero-d.d-three .event-story .story-copy,.hero-d.d-three .leadership-story .story-copy{padding:18px}#page-container .entry-content .hero-d.d-two h2,#page-container .entry-content .hero-d.d-three .event-story h2,#page-container .entry-content .hero-d.d-three .leadership-story h2{font-size:25px!important}#page-container .entry-content .hero-d.d-two .lead-story h2{font-size:38px!important}}
 @media(max-width:650px){.hero-d.d-two .story-mosaic,.hero-d.d-three .story-mosaic{grid-template-columns:1fr;grid-template-rows:360px 280px 280px}.hero-d.d-three .lead-story,.hero-d.d-three .event-story,.hero-d.d-three .leadership-story{grid-column:auto;grid-row:auto}#page-container .entry-content .hero-d.d-two .lead-story h2{font-size:36px!important}.hero-d.d-three .event-story .story-copy,.hero-d.d-three .leadership-story .story-copy{padding:18px}}
+
+/* Keep the colour photograph clear above the caption fade. */
+.hero-d .lead-story>img{opacity:1}
+.hero-d .lead-story:after{background:linear-gradient(0deg,rgba(3,49,71,.98),rgba(3,49,71,.68) 30%,rgba(3,49,71,0) 78%)}
