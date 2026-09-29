@@ -62,3 +62,8 @@
 }
 
 @media(max-width:380px){#page-container .entry-content .hero-d.d-three .event-story h2,#page-container .entry-content .hero-d.d-three .leadership-story h2{font-size:21px!important}.hero-d.d-three .event-story .story-copy,.hero-d.d-three .leadership-story .story-copy{padding:16px}.hero-d .story-destination{gap:8px}}
+
+/* The original page pulled its intro row up over the hero. */
+.hero-d + .et_pb_section{margin-top:0!important;clear:both}
+.hero-d + .et_pb_section > .et_pb_row{margin-top:0!important;transform:none!important}
+@media(max-width:980px){.new-hero.hero-d{height:auto!important;max-height:none!important}.hero-d.d-one .story-mosaic,.hero-d.d-two .story-mosaic,.hero-d.d-three .story-mosaic{display:block;height:auto!important}.hero-d .story-mosaic>.feature-story{margin-bottom:14px}.hero-d .story-mosaic>.feature-story:last-child{margin-bottom:0}.hero-d + .et_pb_section{padding-top:32px!important}}
