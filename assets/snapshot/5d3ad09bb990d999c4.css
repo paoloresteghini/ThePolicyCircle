@@ -1,0 +1,115 @@
+/* ── Page-nav bar ──────────────────────────────────────────────── */
+.pm-page-nav {
+	--pm-nav-top: 0px;
+
+	align-items: center;
+	background: rgba(255, 255, 255, 0.97);
+	border-bottom: 1px solid var(--color-ice-blue);
+	border-radius: 0;
+	box-shadow: 0 4px 20px rgba(3, 49, 71, 0.14);
+	display: flex;
+	justify-content: center;
+	left: 0;
+	max-width: none;
+	opacity: 0;
+	padding: 0 clamp(1rem, 4vw, 4rem);
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	top: var(--pm-nav-top);
+	transition: opacity 0.25s ease, visibility 0.25s ease;
+	visibility: hidden;
+	width: 100%;
+	z-index: 2147483647;
+}
+
+.pm-page-nav.is-visible {
+	opacity: 1;
+	pointer-events: auto;
+	visibility: visible;
+}
+
+/* ── Title removed ──────────────────────────────────────────────── */
+.pm-page-nav__title {
+	display: none;
+}
+
+/* ── Nav list ───────────────────────────────────────────────────── */
+.pm-page-nav__list {
+	display: flex;
+	flex-direction: row;
+	gap: 0;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	overflow-x: auto;
+	padding: 0;
+}
+
+.pm-page-nav__item {
+	display: flex;
+	padding: 0;
+}
+
+.pm-page-nav__link {
+	align-items: center;
+	border-bottom: 3px solid transparent;
+	color: var(--color-primary);
+	display: flex;
+	font-size: var(--font-size--xx-small);
+	font-weight: 700;
+	line-height: 1;
+	padding: 1rem 1.2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+	white-space: nowrap;
+}
+
+.pm-page-nav__link:hover,
+.pm-page-nav__link:focus {
+	background-color: var(--color-light-gray);
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+.pm-page-nav__link.active {
+	border-bottom-color: var(--color-orange);
+	color: var(--color-primary);
+}
+
+.pm-page-nav__link.active:hover,
+.pm-page-nav__link.active:focus {
+	color: var(--color-primary);
+}
+
+/* ── Mobile: fixed bottom bar ───────────────────────────────────── */
+@media screen and (max-width: 980px) {
+	body.has-pm-page-nav {
+		padding-bottom: 6.4rem;
+	}
+
+	.pm-page-nav {
+		border-bottom: 0;
+		border-radius: 8px 8px 0 0;
+		border-top: 1px solid var(--color-ice-blue);
+		bottom: 0;
+		padding: 0.8rem 1rem;
+		top: auto;
+		transform: translateY(100%);
+		transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+	}
+
+	.pm-page-nav.is-visible {
+		transform: none;
+	}
+
+	.pm-page-nav__list {
+		gap: 0.6rem;
+		justify-content: flex-start;
+	}
+
+	.pm-page-nav__link {
+		padding: 0.6rem 0.8rem;
+	}
+}
