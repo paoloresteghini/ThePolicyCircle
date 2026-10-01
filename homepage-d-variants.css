@@ -9,10 +9,10 @@
 .hero-d.d-two .story-copy{padding:28px}
 #page-container .entry-content .hero-d.d-two h2{font-size:32px!important}
 #page-container .entry-content .hero-d.d-two .lead-story h2{font-size:46px!important}
-.hero-d.d-three .story-mosaic{grid-template-columns:1fr 1.35fr;grid-template-rows:245px 245px}
-.hero-d.d-three .lead-story{grid-column:2;grid-row:1/3}
-.hero-d.d-three .event-story{grid-column:1;grid-row:1}
-.hero-d.d-three .leadership-story{grid-column:1;grid-row:2}
+.hero-d.d-three .story-mosaic{grid-template-columns:1.35fr 1fr;grid-template-rows:245px 245px}
+.hero-d.d-three .lead-story{grid-column:1;grid-row:1/3}
+.hero-d.d-three .event-story{grid-column:2;grid-row:1}
+.hero-d.d-three .leadership-story{grid-column:2;grid-row:2}
 .hero-d.d-three .event-story,.hero-d.d-three .leadership-story{background:white;color:#033147}
 .hero-d.d-three .event-story:after{display:none}
 .hero-d.d-three .event-story>img,.hero-d.d-three .leadership-story>img{width:43%;left:0;right:auto;display:block;object-position:center}
